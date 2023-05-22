@@ -35,8 +35,7 @@
             echo $name . "<br>";
         }
     }
-
-    /*  function myTest()
+    function myTest()
     {
         $x = 0;
         echo $x;
@@ -47,7 +46,6 @@
     myTest();
     myTest();
     myTest();
-
 
 
     $txt1 = "Fuck PHP";
@@ -63,7 +61,6 @@
 
     $cars = array("Volvo", "BMW", "Toyota");
     var_dump($cars);
-
 
 
 
@@ -85,29 +82,21 @@
         }
     }
 
-
     $myCar = new Car("red", "BMW");
     $myNewCar = new Car("Black", "audi");
-
 
 
     echo $myCar->output();
     echo $myNewCar->output();
 
-
     echo (abs(-33426.7));
-
     echo ("<br>" . rand(5, 23));
-
-
 
     $firstName = 'Adil';
     $lastName = "Mahmoud";
 
     $fullName = $firstName . $lastName;
     echo ('<br>' . $fullName);
-
-
 
     $x = 12;
     $y = 23;
@@ -116,8 +105,7 @@
     $nullCoalescing = ($x < $y) && $y;
 
     echo ("<br> $ternary");
-    echo ("<br> $nullCoalescing"); */
-
+    echo ("<br> $nullCoalescing");
     echo $_SERVER['PHP_SELF'];
     echo "<br>";
     echo $_SERVER['SERVER_NAME'];
@@ -133,15 +121,6 @@
     echo $_SERVER['SERVER_SOFTWARE'];
     echo '<br>';
     echo $_SERVER['SERVER_PORT']
-
-
-
-
-
-
-
-
-
 
     ?>
 </body>
