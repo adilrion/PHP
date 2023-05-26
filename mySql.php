@@ -107,7 +107,7 @@
 
     // select row
 
-    $query = "SELECT id, firstname, lastname, email FROM school";
+    /*   $query = "SELECT id, firstname, lastname, email FROM school";
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
@@ -116,11 +116,40 @@
         }
     }else{
         echo "0 result";
+    } */
+
+
+    $findQuery = "SELECT id, firstname, lastname, email FROM school ORDER BY id LIMIT 5";
+    $findResult = $conn->query($findQuery);
+
+    if ($findResult->num_rows > 0) {
+        echo "<br>we find number of row: " . $findResult->num_rows;
+        while ($singleValue = $findResult->fetch_assoc()) {
+            echo "<br><br>id: " . $singleValue["id"] . "<br>First Name: " . $singleValue["firstname"] . "<br>Last Name: " . $singleValue["lastname"];
+        }
+    } else {
+        echo "result adil not found <br>";
+    }
+
+/* 
+
+    $sql = "DELETE FROM school WHERE id=145";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<br>Record deleted successfully";
+    } else {
+        echo "<br>Error deleting record: " . $conn->error;
     }
 
 
+    $sql = "UPDATE school SET lastname='Adil Mahmoud Rion' WHERE id=167";
 
-
+    if ($conn->query($sql) === TRUE) {
+        echo "<br> Record updated successfully";
+    } else {
+        echo "Error updating record: " . $conn->error;
+    }
+ */
 
 
     $conn->close();
